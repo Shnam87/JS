@@ -40,11 +40,23 @@ function calculate2Num(a, b) {
 console.log(calculate2Num(3,5))
 
 // Övning 4.1 =
-document.querySelector(".exercis5").textContent= "Resultat = "+ calculate2Num(3,5)
+document.querySelector(".exercis4B").textContent= "Resultat = "+ calculate2Num(3,5)
 
 // document.querySelector(".summa").textContent= "Resultat = "+ calculate2Num(3,5)
 
 const summan= document.querySelector(".summa")
 summan.textContent= "Resultat = "+ calculate2Num(3,7)
 
-// Övning 5 =
+// En dynamiskt version av övning 4 =
+function summera(e) {
+    e.preventDefault();
+
+    let inputOne= document.querySelector("#num1").value;
+    let inputTwo= document.querySelector("#num2").value;
+    let summa= Number(inputOne)+Number(inputTwo);
+
+    const p= document.querySelector("#summan")
+    p.textContent = summa
+}
+const button= document.querySelector(".summera")
+button.addEventListener("click", summera)
