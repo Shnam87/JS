@@ -87,3 +87,33 @@ console.log(r.split("").join(""))
 */
 
 // Övning 7 =
+// 3 funktioner: en för att lägga till, en för att ta bort en i taget och en för att rensa hela listan
+function addToShopping(e) {
+    e.preventDefault();
+
+    let text= document.querySelector("#addShopping").value
+  //  console.log(text)
+    const newEntry= document.createElement("li")
+    newEntry.textContent=text
+    const shoppingList= document.querySelector(".shoppingList")
+    shoppingList.appendChild(newEntry)
+}
+document.querySelector("#adding").addEventListener("click", addToShopping)
+
+function removeFromShopping(e) {
+    e.preventDefault();
+
+    var p= document.querySelector(".shoppingList")
+    var entry= document.querySelector("li")
+    p.removeChild(entry)
+}
+document.querySelector("#removing").addEventListener("click", removeFromShopping)
+
+function clearShopping(e) {
+    e.preventDefault();
+
+    var p= document.querySelector(".shoppingList")
+    var entry= document.querySelector("li")
+    p.remove(entry)
+}
+document.querySelector("#clearAll").addEventListener("click", clearShopping)
