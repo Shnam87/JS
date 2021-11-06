@@ -60,3 +60,30 @@ function summera(e) {
 }
 const button= document.querySelector(".summera")
 button.addEventListener("click", summera)
+
+// Övning 5 =
+const funExp = function (str) {
+    console.log(str)
+    return str
+}
+funExp("Hello there");
+
+// Övning 6 =
+function stringToArray(str) {
+    console.log(str.split(""))
+    return str.split("")
+}
+stringToArray("Rakib");
+
+/*
+let r = "Rakib";
+function split() {
+    console.log(r.split(""))
+}
+split()
+console.log(r.split("").reverse())
+console.log(r.split("").reverse().join(""))
+console.log(r.split("").join(""))
+*/
+
+// Övning 7 =

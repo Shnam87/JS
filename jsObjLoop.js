@@ -11,20 +11,23 @@ console.log(personObject.age)
 // Det andra:
 console.log(personObject["name"])
 
-
+// tar fram alla nycklarna i array form 
 const keyList = Object.keys(personObject)
  console.log(keyList)
 
+// tar fram alla värderna i list form 
 keyList.map( e=> console.log(personObject[e]))
 
+// tar fram alla värderna i array form 
 const valuesList = Object.values(personObject);
  console.log(valuesList)
 
+// tar fram alla värderna i list form 
 valuesList.map( e=> console.log(e))
 
+// tar fram allt i en array in array form 
 const objectKeys_values = Object.entries(personObject);
  console.log(objectKeys_values);
-
 
 /*  for .. of  */ 
 
@@ -32,9 +35,12 @@ const objectKeys_values = Object.entries(personObject);
 //    
 //   }
 
-//for( index, element of array      )
-//{ }
+//for( index, element of array ) {
+//
+//   }
 
+
+// tar fram alla nycklarna och värderna i list form 
 for( const [key, value] of objectKeys_values) {
     console.log(key, value )
 }
