@@ -117,3 +117,37 @@ function clearShopping(e) {
     p.remove(entry)
 }
 document.querySelector("#clearAll").addEventListener("click", clearShopping)
+
+// Övning 8 =
+function reversingText(text) {
+    return text.split("").reverse().join("")
+}
+const textReassemble= reversingText("Testing")
+console.log(textReassemble);
+
+// Övning 9 =
+  /*  Alternativ ett:  */
+function checkingPalindrome(string) {
+    if (string.toLowerCase() == string.toLowerCase().split("").reverse().join("")) {
+        console.log("Ja, detta är ett palindrom");
+    } else {
+        console.log("Nej, detta är inte ett palindrom");
+    }
+}
+checkingPalindrome("Anna");
+checkingPalindrome("Sara");
+
+  /*  Alternativ Två:  */
+function checkPalindrom (str) {
+    return str.toLowerCase() == str.toLowerCase().split('').reverse().join('');
+}
+console.log(checkPalindrom("Anna"));
+console.log(checkPalindrom("Sara"));
+
+// Övning 10 =
+let text= "something something dark side..";
+const newText= text.replace(/something/gi, function (re) {
+    return re= "someotherthing";
+})
+document.querySelector(".replacedText").textContent= " Resultat = "+ newText;
+
