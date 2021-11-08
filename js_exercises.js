@@ -126,7 +126,7 @@ const textReassemble= reversingText("Testing")
 console.log(textReassemble);
 
 // Övning 9 =
-  /*  Alternativ ett:  */
+  /*  Alternativ Ett:  */
 function checkingPalindrome(string) {
     if (string.toLowerCase() == string.toLowerCase().split("").reverse().join("")) {
         console.log("Ja, detta är ett palindrom");
@@ -143,6 +143,31 @@ function checkPalindrom (str) {
 }
 console.log(checkPalindrom("Anna"));
 console.log(checkPalindrom("Sara"));
+
+
+/* Alternativ Tre: */
+function palindromeCheckingS(string) {
+    if (string.toLowerCase() == string.toLowerCase().split("").reverse().join("")) {
+        console.log("Ja, " + string + " är ett palindrom");
+    } else {
+        console.log("Nej, " + string + " är inte ett palindrom");
+    }
+}
+palindromeCheckingS("Anna");
+palindromeCheckingS("Sara");
+
+/* Alternativ Fyra: */
+function palindromeChecking(string) {
+    const check= string.toLowerCase() == string.toLowerCase().split("").reverse().join("")
+    if (string.toLowerCase() == string.toLowerCase().split("").reverse().join("")) {
+        console.log(check+ ", detta är ett palindrom");
+    } else {
+        console.log(check + ", detta är inte ett palindrom");
+    }
+}
+palindromeChecking("Anna");
+palindromeChecking("Sara");
+
 
 // Övning 10 =
 let text= "something something dark side..";
