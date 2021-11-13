@@ -97,14 +97,35 @@ function addToShopping(e) {
     newEntry.textContent=text
     const shoppingList= document.querySelector(".shoppingList")
     shoppingList.appendChild(newEntry)
+
+    console.log(newEntry.textContent);
+    console.log(newEntry);
+
+
+   // localStorage.setItem("newEntry", JSON.stringify(newEntry.textContent));
+   // const localstorageValue = localStorage.getItem("newEntry");
+   // console.log(localstorageValue);
+
+    document.querySelector("#addShopping").value = "";
+
+
 }
 document.querySelector("#adding").addEventListener("click", addToShopping)
+
+//localStorage.setItem("newEntry", JSON.stringify(document.querySelector(".shoppingList").innerHTML.value));
+//const localstorageValue = localStorage.getItem("newEntry");
+//console.log(localstorageValue);
+
+//document.querySelector("li").textContent = localStorage.getItem("lastname"); 
 
 function removeFromShopping(e) {
     e.preventDefault();
 
     var p= document.querySelector(".shoppingList")
-    var entry= document.querySelector("li")
+   // var entry= document.querySelector("li")
+   // var entry= document.querySelector("li:nth-last-child(1)")
+    var entry= document.querySelector("li:last-child") 
+
     p.removeChild(entry)
 }
 document.querySelector("#removing").addEventListener("click", removeFromShopping)
